@@ -20,7 +20,7 @@ The table below is pulled directly from my GeeksforGeeks profile and refreshed a
 | 🟠 Medium | 385 |
 | 🔴 Hard | 71 |
 
-<sub>Last updated: 05 Jul 2026, 12:27 UTC • Source: [GeeksforGeeks profile](https://www.geeksforgeeks.org/profile/parthsarthimpi)</sub>
+<sub>Last updated: 05 Jul 2026, 12:30 UTC • Source: [GeeksforGeeks profile](https://www.geeksforgeeks.org/profile/parthsarthimpi)</sub>
 <!--GFG_STATS_END-->
 
 ---
