@@ -12,19 +12,6 @@ The table below is pulled directly from my GeeksforGeeks profile and refreshed a
 
 [![GeeksForGeeks stats](https://gfgstatscard.vercel.app/parthsarthimpi)](https://www.geeksforgeeks.org/profile/parthsarthimpi)
 
-<!--GFG_STATS_START-->
-| Metric | Value |
-|---|---|
-| 🟢 School | 0 |
-| 🔵 Basic | 21 |
-| 🟡 Easy | 135 |
-| 🟠 Medium | 385 |
-| 🔴 Hard | 71 |
-| 🏫 Institute Rank | N/A |
-| 💯 Coding Score | N/A |
-| 🔥 Longest Streak | N/A days |
-<!--GFG_STATS_END-->
-
 ---
 
 ## 📁 Repository Structure
