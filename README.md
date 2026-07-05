@@ -10,10 +10,11 @@ This repository is a personal archive of my solutions to GeeksforGeeks **Problem
 
 The table below is pulled directly from my GeeksforGeeks profile and refreshed automatically every day via a GitHub Action — no screenshots, always current.
 
+[![GeeksForGeeks stats](https://gfgstatscard.vercel.app/parthsarthimpi)](https://www.geeksforgeeks.org/profile/parthsarthimpi)
+
 <!--GFG_STATS_START-->
 | Metric | Value |
 |---|---|
-| 🧩 Total Problems Solved | **N/A** |
 | 🟢 School | 0 |
 | 🔵 Basic | 21 |
 | 🟡 Easy | 135 |
@@ -22,7 +23,6 @@ The table below is pulled directly from my GeeksforGeeks profile and refreshed a
 | 🏫 Institute Rank | N/A |
 | 💯 Coding Score | N/A |
 | 🔥 Longest Streak | N/A days |
-[![GeeksForGeeks stats](https://gfgstatscard.vercel.app/parthsarthimpi)](https://www.geeksforgeeks.org/profile/parthsarthimpi)
 <!--GFG_STATS_END-->
 
 ---
