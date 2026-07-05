@@ -13,14 +13,14 @@ The table below is pulled directly from my GeeksforGeeks profile and refreshed a
 <!--GFG_STATS_START-->
 | Metric | Count |
 |---|---|
-| 🧩 Total Problems Solved | **—** |
-| 🟢 School | — |
-| 🔵 Basic | — |
-| 🟡 Easy | — |
-| 🟠 Medium | — |
-| 🔴 Hard | — |
+| 🧩 Total Problems Solved | **N/A** |
+| 🟢 School | 0 |
+| 🔵 Basic | 21 |
+| 🟡 Easy | 135 |
+| 🟠 Medium | 385 |
+| 🔴 Hard | 71 |
 
-<sub>Stats will populate after the first workflow run.</sub>
+<sub>Last updated: 05 Jul 2026, 12:22 UTC • Source: [GeeksforGeeks profile](https://www.geeksforgeeks.org/profile/parthsarthimpi)</sub>
 <!--GFG_STATS_END-->
 
 ---
