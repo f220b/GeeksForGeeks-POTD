@@ -13,17 +13,17 @@ The table below is pulled directly from my GeeksforGeeks profile and refreshed a
 <!--GFG_STATS_START-->
 | Metric | Value |
 |---|---|
-| 🧩 Total Problems Solved | **—** |
-| 🟢 School | — |
-| 🔵 Basic | — |
-| 🟡 Easy | — |
-| 🟠 Medium | — |
-| 🔴 Hard | — |
-| 🏫 Institute Rank | — |
-| 💯 Coding Score | — |
-| 🔥 Longest Streak | — days |
+| 🧩 Total Problems Solved | **N/A** |
+| 🟢 School | 0 |
+| 🔵 Basic | 21 |
+| 🟡 Easy | 135 |
+| 🟠 Medium | 385 |
+| 🔴 Hard | 71 |
+| 🏫 Institute Rank | N/A |
+| 💯 Coding Score | N/A |
+| 🔥 Longest Streak | N/A days |
 
-<sub>Stats will populate after the first workflow run.</sub>
+<sub>Last updated: 05 Jul 2026, 12:35 UTC • Source: [GeeksforGeeks profile](https://www.geeksforgeeks.org/profile/parthsarthimpi)</sub>
 <!--GFG_STATS_END-->
 
 ---
