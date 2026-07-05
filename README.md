@@ -22,8 +22,7 @@ The table below is pulled directly from my GeeksforGeeks profile and refreshed a
 | 🏫 Institute Rank | N/A |
 | 💯 Coding Score | N/A |
 | 🔥 Longest Streak | N/A days |
-
-<sub>Last updated: 05 Jul 2026, 12:53 UTC • Source: [GeeksforGeeks profile](https://www.geeksforgeeks.org/profile/parthsarthimpi)</sub>
+[![GeeksForGeeks stats](https://gfgstatscard.vercel.app/parthsarthimpi)](https://www.geeksforgeeks.org/profile/parthsarthimpi)
 <!--GFG_STATS_END-->
 
 ---
