@@ -11,16 +11,19 @@ This repository is a personal archive of my solutions to GeeksforGeeks **Problem
 The table below is pulled directly from my GeeksforGeeks profile and refreshed automatically every day via a GitHub Action — no screenshots, always current.
 
 <!--GFG_STATS_START-->
-| Metric | Count |
+| Metric | Value |
 |---|---|
-| 🧩 Total Problems Solved | **N/A** |
-| 🟢 School | 0 |
-| 🔵 Basic | 21 |
-| 🟡 Easy | 135 |
-| 🟠 Medium | 385 |
-| 🔴 Hard | 71 |
+| 🧩 Total Problems Solved | **—** |
+| 🟢 School | — |
+| 🔵 Basic | — |
+| 🟡 Easy | — |
+| 🟠 Medium | — |
+| 🔴 Hard | — |
+| 🏫 Institute Rank | — |
+| 💯 Coding Score | — |
+| 🔥 Longest Streak | — days |
 
-<sub>Last updated: 05 Jul 2026, 12:30 UTC • Source: [GeeksforGeeks profile](https://www.geeksforgeeks.org/profile/parthsarthimpi)</sub>
+<sub>Stats will populate after the first workflow run.</sub>
 <!--GFG_STATS_END-->
 
 ---
@@ -45,6 +48,8 @@ Each solution file is named after the problem it solves and contains a working, 
 - **Language:** C++
 - **Automation:** [GfG To GitHub](https://github.com/AtharvaNanavate/GfG-To-GitHub) for syncing solved problems to this repo
 - **Stats sync:** GitHub Actions + Python (see [`scripts/update_stats.py`](scripts/update_stats.py))
+
+No manual editing, no stat images — just a clean table that stays in sync with my actual profile.
 
 ## 📌 About Me
 
