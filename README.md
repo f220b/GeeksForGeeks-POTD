@@ -1,2 +1,65 @@
-# GeeksForGeeks-POTD
-This repository serves as a collection of my solutions to various GeeksforGeeks Data Structures and Algorithms (DSA) problems, organized by the level of difficulty. - Created using [GfG To GitHub](https://github.com/AtharvaNanavate/GfG-To-GitHub)
+# GeeksforGeeks POTD Solutions
+
+This repository is a personal archive of my solutions to GeeksforGeeks **Problem of the Day (POTD)** and practice DSA problems, organized by difficulty level.
+
+🔗 **GFG Profile:** [parthsarthimpi](https://www.geeksforgeeks.org/profile/parthsarthimpi)
+
+---
+
+## 📊 Live Stats
+
+The table below is pulled directly from my GeeksforGeeks profile and refreshed automatically every day via a GitHub Action — no screenshots, always current.
+
+<!--GFG_STATS_START-->
+| Metric | Count |
+|---|---|
+| 🧩 Total Problems Solved | **—** |
+| 🟢 School | — |
+| 🔵 Basic | — |
+| 🟡 Easy | — |
+| 🟠 Medium | — |
+| 🔴 Hard | — |
+
+<sub>Stats will populate after the first workflow run.</sub>
+<!--GFG_STATS_END-->
+
+---
+
+## 📁 Repository Structure
+
+Problems are grouped by difficulty, matching GeeksforGeeks' own classification:
+
+```
+GeeksForGeeks-POTD/
+├── Difficulty: Basic/
+├── Difficulty: Easy/
+├── Difficulty: Medium/
+├── Difficulty: Hard/
+└── README.md
+```
+
+Each solution file is named after the problem it solves and contains a working, tested implementation.
+
+## 🛠 Tech Stack
+
+- **Language:** C++
+- **Automation:** [GfG To GitHub](https://github.com/AtharvaNanavate/GfG-To-GitHub) for syncing solved problems to this repo
+- **Stats sync:** GitHub Actions + Python (see [`scripts/update_stats.py`](scripts/update_stats.py))
+
+## 🔄 How the Stats Auto-Update
+
+1. A scheduled GitHub Action runs daily (`.github/workflows/update-readme.yml`).
+2. It calls a public GFG stats endpoint for my username and gets back JSON (problems solved, difficulty breakdown, etc.).
+3. A Python script formats that JSON into the markdown table above and commits it back to this README.
+
+No manual editing, no stat images — just a clean table that stays in sync with my actual profile.
+
+## 📌 About Me
+
+- 💼 Central Execution Trader @ Graviton Research Capital LLP
+- 💻 Practicing DSA consistently via GeeksforGeeks POTD
+- 📈 Tracking progress here as a public log
+
+---
+
+<sub>⭐ If you find this useful as a template for your own POTD tracker, feel free to fork it.</sub>
