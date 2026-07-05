@@ -23,7 +23,7 @@ The table below is pulled directly from my GeeksforGeeks profile and refreshed a
 | 💯 Coding Score | N/A |
 | 🔥 Longest Streak | N/A days |
 
-<sub>Last updated: 05 Jul 2026, 12:37 UTC • Source: [GeeksforGeeks profile](https://www.geeksforgeeks.org/profile/parthsarthimpi)</sub>
+<sub>Last updated: 05 Jul 2026, 12:38 UTC • Source: [GeeksforGeeks profile](https://www.geeksforgeeks.org/profile/parthsarthimpi)</sub>
 <!--GFG_STATS_END-->
 
 ---
