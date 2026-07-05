@@ -14,7 +14,6 @@ The table below is pulled directly from my GeeksforGeeks profile and refreshed a
 <!--GFG_STATS_START-->
 | Metric | Count |
 |---|---|
-| 🧩 Total Problems Solved | **N/A** |
 | 🟢 School | 0 |
 | 🔵 Basic | 21 |
 | 🟡 Easy | 135 |
