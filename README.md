@@ -1,23 +1,65 @@
-# 💻 GeeksForGeeks POTD Submissions
+# GeeksforGeeks POTD Solutions
 
-A structured repository containing my daily solutions to the [GeeksForGeeks Problem of the Day](https://practice.geeksforgeeks.org/problem-of-the-day).
+This repository is a personal archive of my solutions to GeeksforGeeks **Problem of the Day (POTD)** and practice DSA problems, organized by difficulty level.
 
-## 👤 Profile Statistics
+🔗 **GFG Profile:** [parthsarthimpi](https://www.geeksforgeeks.org/profile/parthsarthimpi)
 
-<!-- GFG_STATS:START -->
-| Metric | Value |
+---
+
+## 📊 Live Stats
+
+The table below is pulled directly from my GeeksforGeeks profile and refreshed automatically every day via a GitHub Action — no screenshots, always current.
+
+<!--GFG_STATS_START-->
+| Metric | Count |
 |---|---|
-| **Total Problems Solved** | N/A |
-| **Coding Score** | N/A |
-<!-- GFG_STATS:END -->
+| 🧩 Total Problems Solved | **—** |
+| 🟢 School | — |
+| 🔵 Basic | — |
+| 🟡 Easy | — |
+| 🟠 Medium | — |
+| 🔴 Hard | — |
+
+<sub>Stats will populate after the first workflow run.</sub>
+<!--GFG_STATS_END-->
+
+---
 
 ## 📁 Repository Structure
 
-- Code is primarily written in **C++**.
-- Solutions include optimal Time Complexity (TC) and Space Complexity (SC).
-- Code satisfies all constraints and hidden test cases.
+Problems are grouped by difficulty, matching GeeksforGeeks' own classification:
 
-## 🔗 Links
+```
+GeeksForGeeks-POTD/
+├── Difficulty: Basic/
+├── Difficulty: Easy/
+├── Difficulty: Medium/
+├── Difficulty: Hard/
+└── README.md
+```
 
-- [GeeksForGeeks Profile](https://www.geeksforgeeks.org/profile/parthsarthimpi)
-- [GFG POTD Page](https://practice.geeksforgeeks.org/problem-of-the-day)
+Each solution file is named after the problem it solves and contains a working, tested implementation.
+
+## 🛠 Tech Stack
+
+- **Language:** C++
+- **Automation:** [GfG To GitHub](https://github.com/AtharvaNanavate/GfG-To-GitHub) for syncing solved problems to this repo
+- **Stats sync:** GitHub Actions + Python (see [`scripts/update_stats.py`](scripts/update_stats.py))
+
+## 🔄 How the Stats Auto-Update
+
+1. A scheduled GitHub Action runs daily (`.github/workflows/update-readme.yml`).
+2. It calls a public GFG stats endpoint for my username and gets back JSON (problems solved, difficulty breakdown, etc.).
+3. A Python script formats that JSON into the markdown table above and commits it back to this README.
+
+No manual editing, no stat images — just a clean table that stays in sync with my actual profile.
+
+## 📌 About Me
+
+- 💼 Central Execution Trader @ Graviton Research Capital LLP
+- 💻 Practicing DSA consistently via GeeksforGeeks POTD
+- 📈 Tracking progress here as a public log
+
+---
+
+<sub>⭐ If you find this useful as a template for your own POTD tracker, feel free to fork it.</sub>
