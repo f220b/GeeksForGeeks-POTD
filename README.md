@@ -46,14 +46,6 @@ Each solution file is named after the problem it solves and contains a working, 
 - **Automation:** [GfG To GitHub](https://github.com/AtharvaNanavate/GfG-To-GitHub) for syncing solved problems to this repo
 - **Stats sync:** GitHub Actions + Python (see [`scripts/update_stats.py`](scripts/update_stats.py))
 
-## 🔄 How the Stats Auto-Update
-
-1. A scheduled GitHub Action runs daily (`.github/workflows/update-readme.yml`).
-2. It calls a public GFG stats endpoint for my username and gets back JSON (problems solved, difficulty breakdown, etc.).
-3. A Python script formats that JSON into the markdown table above and commits it back to this README.
-
-No manual editing, no stat images — just a clean table that stays in sync with my actual profile.
-
 ## 📌 About Me
 
 - 💼 Central Execution Trader @ Graviton Research Capital LLP
