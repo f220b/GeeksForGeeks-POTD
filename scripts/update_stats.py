@@ -60,8 +60,9 @@ def fetch_stats() -> dict | None:
 def get_field(data: dict, *candidates, default=0):
     """Look up a field trying several possible key spellings/nesting."""
     by_diff = data.get("problemsByDifficulty", {})
+    info = data.get("info", {})
     for key in candidates:
-        for src in (data, by_diff):
+        for src in (data, by_diff, info):
             if key in src and src[key] not in (None, ""):
                 return src[key]
     return default
@@ -75,10 +76,20 @@ def build_table(data: dict) -> str:
     medium = get_field(data, "Medium", "medium")
     hard = get_field(data, "Hard", "hard")
 
+    coding_score = get_field(
+        data, "codingScore", "CodingScore", "score", default="N/A"
+    )
+    institute_rank = get_field(
+        data, "instituteRank", "institute_rank", "collegeRank", default="N/A"
+    )
+    longest_streak = get_field(
+        data, "maxStreak", "longestStreak", "max_streak", default="N/A"
+    )
+
     updated = datetime.now(timezone.utc).strftime("%d %b %Y, %H:%M UTC")
 
     table = f"""
-| Metric | Count |
+| Metric | Value |
 |---|---|
 | 🧩 Total Problems Solved | **{total}** |
 | 🟢 School | {school} |
@@ -86,6 +97,9 @@ def build_table(data: dict) -> str:
 | 🟡 Easy | {easy} |
 | 🟠 Medium | {medium} |
 | 🔴 Hard | {hard} |
+| 🏫 Institute Rank | {institute_rank} |
+| 💯 Coding Score | {coding_score} |
+| 🔥 Longest Streak | {longest_streak} days |
 
 <sub>Last updated: {updated} • Source: [GeeksforGeeks profile](https://www.geeksforgeeks.org/profile/{GFG_USERNAME})</sub>
 """
