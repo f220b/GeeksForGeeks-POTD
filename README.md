@@ -3,7 +3,6 @@
 This repository is a personal archive of my solutions to GeeksforGeeks **Problem of the Day (POTD)** and practice DSA problems, organized by difficulty level.
 
 🔗 **GFG Profile:** [parthsarthimpi](https://www.geeksforgeeks.org/profile/parthsarthimpi)
-[![GeeksforGeeks Stats](https://gfgstatscard.vercel.app/parthsarthimpi?theme=dark)](https://www.geeksforgeeks.org/profile/parthsarthimpi)
 
 ---
 
