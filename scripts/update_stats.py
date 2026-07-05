@@ -2,52 +2,78 @@
 Fetches GeeksforGeeks profile stats (JSON, no images) and writes them into
 README.md between the STATS-START / STATS-END markers as a markdown table.
 
+Tries multiple independent unofficial GFG APIs in order, with retries, since
+these free hosted services occasionally cold-start-timeout. If every source
+fails, the script exits 0 without touching README.md, so a flaky third-party
+API doesn't turn into a red X on the workflow every night.
+
 Run manually:  python scripts/update_stats.py
 Run in CI:     triggered by .github/workflows/update-readme.yml
 """
 
 import re
 import sys
+import time
 from datetime import datetime, timezone
 
 import requests
 
 GFG_USERNAME = "parthsarthimpi"
-API_URL = f"https://gfg-stats.tashif.codes/{GFG_USERNAME}"
 README_PATH = "README.md"
 
 START_MARKER = "<!--GFG_STATS_START-->"
 END_MARKER = "<!--GFG_STATS_END-->"
 
+# Tried in order. Each entry: (name, url, timeout_seconds)
+SOURCES = [
+    ("tashif GFG-Stats-API", f"https://gfg-stats.tashif.codes/{GFG_USERNAME}", 20),
+    ("gfgstatscard (raw json)", f"https://gfgstatscard.vercel.app/{GFG_USERNAME}?raw=true", 20),
+]
 
-def fetch_stats() -> dict:
-    resp = requests.get(API_URL, timeout=15)
-    resp.raise_for_status()
-    return resp.json()
+MAX_RETRIES_PER_SOURCE = 2
+RETRY_BACKOFF_SECONDS = 5
+
+
+def fetch_from(name: str, url: str, timeout: int) -> dict | None:
+    for attempt in range(1, MAX_RETRIES_PER_SOURCE + 1):
+        try:
+            resp = requests.get(url, timeout=timeout)
+            resp.raise_for_status()
+            data = resp.json()
+            print(f"Fetched stats from {name} (attempt {attempt}).")
+            return data
+        except Exception as e:
+            print(f"[{name}] attempt {attempt} failed: {e}")
+            if attempt < MAX_RETRIES_PER_SOURCE:
+                time.sleep(RETRY_BACKOFF_SECONDS)
+    return None
+
+
+def fetch_stats() -> dict | None:
+    for name, url, timeout in SOURCES:
+        data = fetch_from(name, url, timeout)
+        if data:
+            return data
+    return None
+
+
+def get_field(data: dict, *candidates, default=0):
+    """Look up a field trying several possible key spellings/nesting."""
+    by_diff = data.get("problemsByDifficulty", {})
+    for key in candidates:
+        for src in (data, by_diff):
+            if key in src and src[key] not in (None, ""):
+                return src[key]
+    return default
 
 
 def build_table(data: dict) -> str:
-    total = data.get("totalProblemsSolved", "N/A")
-
-    # The API has returned this breakdown under two different shapes in the
-    # wild: flat keys (School/Basic/Easy/Medium/Hard) or a nested
-    # "problemsByDifficulty" dict (school/basic/easy/medium/hard). Handle both.
-    by_diff = data.get("problemsByDifficulty", {})
-
-    def get_diff(name: str):
-        return (
-            by_diff.get(name.lower())
-            or by_diff.get(name)
-            or data.get(name)
-            or data.get(name.lower())
-            or 0
-        )
-
-    school = get_diff("School")
-    basic = get_diff("Basic")
-    easy = get_diff("Easy")
-    medium = get_diff("Medium")
-    hard = get_diff("Hard")
+    total = get_field(data, "totalProblemsSolved", "solved", default="N/A")
+    school = get_field(data, "School", "school")
+    basic = get_field(data, "Basic", "basic")
+    easy = get_field(data, "Easy", "easy")
+    medium = get_field(data, "Medium", "medium")
+    hard = get_field(data, "Hard", "hard")
 
     updated = datetime.now(timezone.utc).strftime("%d %b %Y, %H:%M UTC")
 
@@ -87,11 +113,14 @@ def update_readme(table: str) -> None:
 
 
 def main() -> None:
-    try:
-        data = fetch_stats()
-    except Exception as e:
-        print(f"Failed to fetch GFG stats: {e}")
-        sys.exit(1)
+    data = fetch_stats()
+
+    if not data:
+        print(
+            "All GFG stats sources failed (likely a temporary outage/cold-start "
+            "on their end). Leaving README.md untouched. Will retry next run."
+        )
+        sys.exit(0)  # graceful — don't fail the whole workflow over a flaky API
 
     table = build_table(data)
     update_readme(table)
